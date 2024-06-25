@@ -1,0 +1,59 @@
+@import '@/variables.scss';
+
+.wrapper {
+    .list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .item {
+        font-size: 16px;
+        font-family: SF UI Text;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: left;
+
+        &::after {
+            content: '/';
+            margin: 0 15px;
+            color: #727783;
+        }
+
+        &:last-child::after {
+            content: '';
+        }
+
+        a {
+            text-decoration: none;
+            color: #727783;
+        }
+        .active {
+            color: black;
+        }
+    }
+}
+
+@media (max-width: $extra-small-display-width) {
+    .wrapper {
+        .item {
+            font-size: 14px;
+            &::after {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mini-display-width) {
+    .wrapper {
+        .item {
+            font-size: 12px;
+            &::after {
+                margin: 0 5px;
+            }
+        }
+    }
+}

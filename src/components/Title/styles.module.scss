@@ -1,0 +1,23 @@
+@import '@/variables.scss';
+
+.text {
+    font-family: SF Pro Display;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+    color: #000000;
+    margin: 0;
+}
+
+@media (max-width: $extra-small-display-width) {
+    .text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: $mini-display-width) {
+    .text {
+        font-size: 24px;
+    }
+}

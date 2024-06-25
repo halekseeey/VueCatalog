@@ -1,0 +1,21 @@
+.container {
+    max-width: 1508px;
+    padding: 0 30px;
+    padding-top: 32px;
+    margin: 0 auto;
+
+    .title {
+        margin: 32px 0;
+    }
+
+    .filters {
+        display: flex;
+        margin-bottom: 41px;
+
+        .select {
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+    }
+}

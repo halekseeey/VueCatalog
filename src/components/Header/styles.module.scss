@@ -1,0 +1,20 @@
+@import '@/variables.scss';
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: $cart-zindex;
+}
+
+.cartButton {
+    background: #f2f2f2;
+    border: solid 1px;
+    margin-right: 10px;
+}

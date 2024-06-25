@@ -1,0 +1,28 @@
+.favorites {
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+    .favoriteItem {
+        display: flex;
+        margin-bottom: 20px;
+
+        .itemImage {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .itemInfo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .deleteButton {
+                width: 100%;
+            }
+        }
+    }
+}
