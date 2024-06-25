@@ -1,6 +1,7 @@
 import {defineComponent} from 'vue'
 import {useFavoritesStore} from '@/stores/favoritesStore'
 import styles from './styles.module.scss'
+import {BASE_URL} from '../MainPage'
 
 export default defineComponent({
     setup() {
@@ -16,7 +17,7 @@ export default defineComponent({
                         {favoritesStore.items.map(item => (
                             <div key={item.id} class={styles.favoriteItem}>
                                 <img
-                                    src={item.imageUrl}
+                                    src={BASE_URL + item.imageUrl}
                                     alt={item.name}
                                     class={styles.itemImage}
                                 />

@@ -1,5 +1,6 @@
 import {defineComponent, ref, type PropType} from 'vue'
 import styles from './styles.module.scss'
+import {BASE_URL} from '../MainPage'
 
 interface Option {
     value: string
@@ -48,7 +49,7 @@ export default defineComponent({
                     >
                         <span>{props.modelValue?.label ?? props.default}</span>
                         <img
-                            src="/arrow.svg"
+                            src={`${BASE_URL}/arrow.svg`}
                             class={`${styles.arrowIcon} ${
                                 isVisible.value ? styles.rotated : ''
                             }`}

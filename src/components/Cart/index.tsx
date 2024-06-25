@@ -1,6 +1,7 @@
 import {defineComponent} from 'vue'
 import {useCartStore} from '@/stores/cartStore'
 import styles from './styles.module.scss'
+import {BASE_URL} from '../MainPage'
 
 export default defineComponent({
     setup() {
@@ -16,7 +17,7 @@ export default defineComponent({
                         {cartStore.items.map(item => (
                             <div key={item.id} class={styles.cartItem}>
                                 <img
-                                    src={item.imageUrl}
+                                    src={BASE_URL + item.imageUrl}
                                     alt={item.name}
                                     class={styles.itemImage}
                                 />

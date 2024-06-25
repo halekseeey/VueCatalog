@@ -13,6 +13,8 @@ type Option<T> = {
     label: string
 }
 
+export const BASE_URL = '/VueCatalog'
+
 export default defineComponent({
     setup() {
         const {getMaterials, getSortOptions, itemsWithMaterials} = useStore()

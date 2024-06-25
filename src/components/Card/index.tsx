@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import type {Item} from '@/models'
 import {useCartStore} from '@/stores/cartStore'
 import {useFavoritesStore} from '@/stores/favoritesStore'
+import {BASE_URL} from '../MainPage'
 
 export default defineComponent({
     props: {
@@ -48,7 +49,7 @@ export default defineComponent({
                     <div class={styles.discountBadge}>Скидка</div>
                 )}
                 <img
-                    src={props.item.image.url}
+                    src={BASE_URL + props.item.image.url}
                     alt={props.item.name}
                     class={styles.image}
                 />
@@ -73,7 +74,7 @@ export default defineComponent({
                                 class={styles.actionButton}
                                 onClick={addToCart}
                             >
-                                <img src="/cart.svg" />
+                                <img src={`${BASE_URL}/cart.svg`} />
                             </button>
                             <button
                                 class={styles.actionButton}
@@ -82,8 +83,8 @@ export default defineComponent({
                                 <img
                                     src={
                                         isFavorite.value
-                                            ? '/redHeart.svg'
-                                            : '/heart.svg'
+                                            ? `${BASE_URL}/redHeart.svg`
+                                            : `${BASE_URL}//heart.svg`
                                     }
                                 />
                             </button>
